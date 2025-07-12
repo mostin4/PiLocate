@@ -32,7 +32,7 @@ Pi Wallet, DAO oylaması ve AI destekli öneri sistemleriyle entegre çalışır
 ## 📦 Kurulum
 
 ```bash
-git clone https://github.com/yourusername/pilocate.git
+git clone https://github.com/mostin4/pilocate.git
 cd pilocate
 npm install
 npm run dev
