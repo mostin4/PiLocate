@@ -1,3 +1,13 @@
+import Hero from '../components/Hero';
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      {/* Harita, modül geçişleri veya diğer bileşenler */}
+    </>
+  );
+}
 import { useState } from 'react';
 
 export default function Home() {
