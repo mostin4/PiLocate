@@ -5,7 +5,7 @@ export default function Hero() {
       <div className="mb-6">
         <img
           src="/banner.svg"
-          alt="PiLocate Banner"
+          alt="DAOVerse Banner"
           className="w-full max-w-4xl mx-auto rounded-lg shadow"
         />
       </div>
@@ -17,7 +17,7 @@ export default function Hero() {
 
       {/* Açıklama */}
       <p className="text-gray-700 text-base md:text-lg max-w-2xl mx-auto mb-6">
-        Pi Network üzerinde KYC doğrulanmış kullanıcılar için global DAO eğitimi, KYB işletme haritası ve yapay zekâ destekli modüller sunan mobil uyumlu DApp platformu.
+        Pi Network üzerinde KYB işletme keşfi, DAO oylama simülasyonu ve AI destekli çok dilli eğitim modülleri.
       </p>
 
       {/* İkon Menüsü */}
@@ -44,3 +44,5 @@ function IconItem({ label, src }: { label: string; src: string }) {
     </div>
   );
 }
+
+
