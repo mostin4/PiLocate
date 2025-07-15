@@ -1,5 +1,3 @@
-import mongoose from 'mongoose';
-
 const BusinessSchema = new mongoose.Schema({
   name: String,
   description: String,
@@ -7,7 +5,10 @@ const BusinessSchema = new mongoose.Schema({
   lng: Number,
   isPiAccepted: Boolean,
   daoScore: Number,
-  email: String
+  email: String,
+  // Yeni eklenenler
+  packageLevel: { type: String, enum: ['basic', 'advanced', 'premium'], default: 'basic' },
+  isFeatured: { type: Boolean, default: false },
+  paymentTx: String
 });
 
-export default mongoose.models.Business || mongoose.model('Business', BusinessSchema);
