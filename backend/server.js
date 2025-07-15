@@ -4,6 +4,8 @@ import { connectDB } from './config/db.js';
 import { getBusinesses, addBusiness } from './api/businesses.js';
 import { sendMessage } from './api/contact.js';
 import { getUser } from './api/users.js';
+import { upgradePackage } from './api/businesses.js';
+app.post('/api/businesses/upgrade', upgradePackage);
 
 const app = express();
 connectDB();
