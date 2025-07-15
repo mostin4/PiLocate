@@ -1,12 +1,11 @@
-import Business from '../models/Business.js';
+export const upgradePackage = async (req, res) => {
+  const { id, packageLevel, paymentTx } = req.body;
+  const business = await Business.findById(id);
+  if (!business) return res.status(404).json({ error: 'İşletme bulunamadı' });
 
-export const getBusinesses = async (req, res) => {
-  const list = await Business.find({});
-  res.json(list);
-};
-
-export const addBusiness = async (req, res) => {
-  const newBusiness = new Business(req.body);
-  await newBusiness.save();
-  res.json({ success: true });
+  business.packageLevel = packageLevel;
+  business.isFeatured = packageLevel !== 'basic';
+  business.paymentTx = paymentTx;
+  await business.save();
+  res.json({ success: true, business });
 };
