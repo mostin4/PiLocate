@@ -9,3 +9,9 @@ export const upgradePackage = async (req, res) => {
   await business.save();
   res.json({ success: true, business });
 };
+export {
+  getBusinesses,
+  addBusiness,
+  upgradePackage // ✅ Yeni eklenen fonksiyon
+};
+
